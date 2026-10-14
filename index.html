@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아기 있는 집 습도 관리, 이제 고민 끝! | 에어메이드 더 위대한 가습기 2.0</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Malgun Gothic","Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+       background:linear-gradient(165deg,#e9f3ff 0%,#fdfbf7 55%,#eef6ff 100%);
+       min-height:100vh;display:flex;flex-direction:column;align-items:center;
+       padding:26px 16px 44px;color:#10213F;-webkit-text-size-adjust:100%}
+  header{text-align:center;max-width:460px;margin-bottom:18px}
+  .badge{display:inline-block;background:#0B6CF0;color:#fff;font-size:13px;font-weight:700;
+         padding:7px 15px;border-radius:999px;margin-bottom:12px;
+         box-shadow:0 6px 16px rgba(11,108,240,.28)}
+  h1{font-size:clamp(20px,5vw,29px);line-height:1.4;font-weight:800;letter-spacing:-.5px}
+  h1 em{font-style:normal;color:#0B6CF0}
+  .stage{position:relative;width:100%;max-width:420px;border-radius:22px;overflow:hidden;
+         background:#000;box-shadow:0 20px 48px rgba(16,33,63,.24)}
+  .stage video{display:block;width:100%;height:auto;background:#000}
+  .scrim{position:absolute;left:0;right:0;bottom:0;height:42%;pointer-events:none;
+         background:linear-gradient(to top,rgba(0,0,0,.55),rgba(0,0,0,0))}
+  .banner{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);
+          width:78%;display:flex;align-items:center;gap:10px;padding:10px 12px;
+          border-radius:16px;background:rgba(255,255,255,.14);
+          backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+          border:1px solid rgba(255,255,255,.35);text-decoration:none;
+          box-shadow:0 8px 22px rgba(0,0,0,.30);animation:pulse 3.2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:translateX(-50%) scale(1)}
+                   50%{transform:translateX(-50%) scale(1.035)}}
+  .humid{width:46px;height:46px;flex:0 0 46px}
+  .btext{display:flex;flex-direction:column;gap:5px;min-width:0}
+  .bhead{color:#fff;font-size:14px;font-weight:800;
+         text-shadow:0 1px 4px rgba(0,0,0,.5);white-space:nowrap}
+  .bbtn{display:inline-flex;align-items:center;gap:6px;background:#0B6CF0;color:#fff;
+        font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:999px;
+        white-space:nowrap;box-shadow:0 4px 12px rgba(11,108,240,.45)}
+  .sound{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.45);color:#fff;
+         border:none;border-radius:999px;padding:8px 12px;font-size:13px;cursor:pointer}
+  .cta{display:inline-block;margin-top:20px;background:#0B6CF0;color:#fff;font-weight:800;
+       font-size:17px;padding:16px 34px;border-radius:999px;text-decoration:none;
+       box-shadow:0 12px 28px rgba(11,108,240,.35)}
+  .features{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+            max-width:420px;width:100%;margin-top:24px}
+  .features li{list-style:none;background:#fff;border:1px solid #dce8f7;border-radius:14px;
+               padding:12px 14px;font-size:14px;font-weight:700;text-align:center;
+               box-shadow:0 6px 16px rgba(16,33,63,.06)}
+  footer{margin-top:26px;font-size:12.5px;color:#6b7a90;text-align:center}
+  .err{display:none;position:absolute;left:16px;right:16px;bottom:46%;color:#fff;
+       font-size:14px;line-height:1.5;text-align:center}
+</style>
+</head>
+<body>
+  <header>
+    <div class="badge">🏆 가습기 비교 1위</div>
+    <h1>아기 있는 집 습도 관리,<br><em>이제 고민 끝!</em></h1>
+  </header>
+
+  <div class="stage">
+    <video id="ad" src="ad.mp4" autoplay muted loop playsinline preload="auto"></video>
+    <div class="scrim"></div>
+    <p class="err" id="err">영상 파일 <b>ad.mp4</b> 를 이 페이지와 같은 폴더에 넣어주세요.</p>
+
+    <a class="banner" href="https://naver.me/FTdZaxzl" target="_blank" rel="noopener noreferrer"
+       aria-label="네이버에서 바로가기">
+      <svg class="humid" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M20 24c0-2 2.5-3 2.5-6M32 22c0-2 2.5-3 2.5-6M44 24c0-2 2.5-3 2.5-6"
+              fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+        <rect x="14" y="26" width="36" height="34" rx="10" fill="#fff"/>
+        <rect x="21" y="38" width="22" height="13" rx="4.5" fill="#0B6CF0"/>
+        <circle cx="27.5" cy="44.5" r="2.6" fill="#fff"/>
+        <circle cx="36.5" cy="44.5" r="2.6" fill="#fff"/>
+      </svg>
+      <span class="btext">
+        <span class="bhead">네이버에서 바로가기</span>
+        <span class="bbtn">naver.me/FTdZaxzl ▶</span>
+      </span>
+    </a>
+
+    <button class="sound" id="sound" type="button">🔇 소리 켜기</button>
+  </div>
+
+  <a class="cta" href="https://naver.me/FTdZaxzl" target="_blank" rel="noopener noreferrer">
+    지금 바로 확인하기 →
+  </a>
+
+  <ul class="features">
+    <li>🧼 자동세척·살균</li>
+    <li>👶 신생아 안심 사용</li>
+    <li>💧 적정 습도 자동 관리</li>
+    <li>🏆 가습기 비교 1위</li>
+  </ul>
+
+  <footer>© 에어메이드 더 위대한 가습기 2.0 · AMH-4502</footer>
+
+<script>
+  var v = document.getElementById('ad');
+  var btn = document.getElementById('sound');
+  v.addEventListener('error', function(){ document.getElementById('err').style.display = 'block'; });
+  btn.addEventListener('click', function(){
+    v.muted = !v.muted;
+    if (!v.muted) { v.play().catch(function(){}); }
+    btn.textContent = v.muted ? '🔇 소리 켜기' : '🔊 소리 끄기';
+  });
+  v.play().catch(function(){ v.muted = true; v.play().catch(function(){}); });
+</script>
+</body>
+</html>
